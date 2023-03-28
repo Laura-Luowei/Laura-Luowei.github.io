@@ -1,0 +1,23 @@
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0;
+
+  &__image {
+    width: 210px;
+    height: auto;
+  }
+
+  &__arrow {
+    position: absolute;
+    left: $grid-gutter;
+    top: 25px;
+    font-size: 20px;
+  }
+
+  &__arrow:hover {
+    color: $secondary;
+  }
+}

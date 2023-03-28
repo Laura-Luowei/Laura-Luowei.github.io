@@ -1,0 +1,169 @@
+// menu header
+.menu-header {
+  &__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+    @include tablet-only {
+      height: 250px;
+    }
+
+    @include desktop-only {
+      height: 300px;
+    }
+  }
+}
+
+// menu dishes
+.menu-dishes {
+  position: relative;
+  background-color: #f2f2f2;
+  border-radius: 35px 35px 0 0;
+  margin-top: -35px;
+  padding-bottom: 60px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+  }
+
+  &__hr {
+    width: 30px;
+    margin: 0 0 12px 0;
+    background-color: #99e2d0;
+  }
+
+  &__item {
+    border-radius: 15px;
+    background: white;
+    margin-bottom: 15px;
+  }
+
+  &__content {
+    display: flex;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__text,
+  &__text h4,
+  &__text p {
+    transition: margin 1s ease-in-out; // transition the text to match the slide in transition
+    margin: 0;
+    white-space: nowrap; // stop text from wrapping onto new line
+    overflow: hidden;
+    text-overflow: ellipsis; // this is what sets the ellipsis for the text
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    transition: margin 1s ease-in-out;
+    margin-right: 0;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    height: 100%;
+    width: 50px;
+    background: #99e2d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 1s ease-in-out;
+  }
+
+  &__rotate {
+    transition: rotate 1s ease-in-out;
+    transform: rotate(0deg); // set the initial rotation value
+    color: white;
+  }
+}
+
+//hover animation effect
+.menu-dishes__item:hover {
+  cursor: pointer;
+
+  .menu-dishes__icon {
+    right: 0; //animation that slides icon in from right side
+  }
+
+  .menu-dishes__text h4,
+  .menu-dishes__text p {
+    margin-right: 10px; // animation margin so we can see ellipses if text doesn't fit, included for heading as well, but maybe it not needed for heading and text should just wrap, so you could remove the heading one if you wish
+  }
+
+  .menu-dishes__price {
+    margin-right: 50px; // animation margin so we can see ellipses if text doesn't fit, included for heading as well, but maybe it not needed for heading and text should just wrap, so you could remove the heading one if you wish
+  }
+
+  .menu-dishes__rotate {
+    transform: rotate(360deg);
+  }
+}
+
+// menu animation
+
+.menu-dishes {
+  .row:nth-child(2) {
+    animation: fast 2s ease-in 2s;
+  }
+
+  @keyframes fast {
+    from {
+      opacity: 0;
+      transform: translatey(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+
+  .row:nth-child(3) {
+    animation: slow 2s ease-in 4s;
+  }
+
+  @keyframes slow {
+    from {
+      opacity: 0;
+      transform: translatey(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+
+  .row:nth-child(4) {
+    animation: delay 2s ease-in 6s;
+  }
+
+  @keyframes delay {
+    from {
+      opacity: 0;
+      transform: translatey(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+}

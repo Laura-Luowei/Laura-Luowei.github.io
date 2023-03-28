@@ -1,0 +1,22 @@
+.heart-items {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fa-heart {
+  color: grey;
+  font-size: 25px;
+}
+.heart-items i {
+  transition: opacity 1s ease-in-out;
+}
+.heart-fill {
+  background-image: linear-gradient($primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.heart-fill:hover {
+  opacity: 1;
+}

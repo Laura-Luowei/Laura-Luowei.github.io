@@ -1,0 +1,28 @@
+/* defaults */
+*:before,
+*:after,
+html {
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  background-color: $body-bg;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.underline:hover {
+    text-decoration: underline;
+  }
+}

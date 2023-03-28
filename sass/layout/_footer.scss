@@ -1,0 +1,25 @@
+.footer {
+  background-color: $footer-bg;
+  padding: 30px $grid-gutter;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  &__list {
+    margin: 25px;
+  }
+
+  &__list-item {
+    padding: 5px 0;
+  }
+
+  &__logo path {
+    fill: #fff;
+  }
+}
