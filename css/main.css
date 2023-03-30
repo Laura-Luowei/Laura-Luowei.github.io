@@ -455,8 +455,12 @@ a.underline:hover {
   border: none;
   cursor: pointer;
   padding: 15px 22px;
-  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  background: linear-gradient(0deg, #9356dc, transparent) #ff79da;
   margin-bottom: 15px;
+  transition: background-color 1s;
+}
+.btn:hover {
+  background-color: #99e2d0;
 }
 .btn.secondary {
   margin: 30px 0;
@@ -552,13 +556,19 @@ a.underline:hover {
   margin: 40px 0;
 }
 
+.works:hover {
+  cursor: pointer;
+}
 .works:hover .works__icon {
   color: #9356dc;
+}
+.works:hover .works__container {
+  background: #f5edff;
 }
 .works__container {
   background-color: #f5f5f5;
   box-shadow: 0 0 8px 2px #f5f5f5;
-  border-radius: 10px;
+  border-radius: 30px;
   position: relative;
   margin: 15px;
   padding: 10px 0;
@@ -601,6 +611,7 @@ a.underline:hover {
 
 .restaurant-box {
   position: relative;
+  display: block;
 }
 .restaurant-box:hover .restaurant-box__image {
   opacity: 0.7;
@@ -724,9 +735,10 @@ a.underline:hover {
   align-items: center;
   justify-content: center;
   transition: right 1s ease-in-out;
+  border-radius: 0 15px 15px 0;
 }
 .menu-dishes__rotate {
-  transition: rotate 1s ease-in-out;
+  transition: all 1s ease-in-out;
   transform: rotate(0deg);
   color: white;
 }

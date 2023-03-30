@@ -85,10 +85,11 @@
     align-items: center;
     justify-content: center;
     transition: right 1s ease-in-out;
+    border-radius: 0 15px 15px 0;
   }
 
   &__rotate {
-    transition: rotate 1s ease-in-out;
+    transition: all 1s ease-in-out;
     transform: rotate(0deg); // set the initial rotation value
     color: white;
   }
